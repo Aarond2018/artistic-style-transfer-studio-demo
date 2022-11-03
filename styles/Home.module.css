@@ -1,129 +1,223 @@
-.container {
-  padding: 0 2rem;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1300px;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+.header h2 {
+  color: #5caeab;
+}
+
+.header > a {
+  font-style: italic;
+}
+
+.container {
+  width: 1300px;
+  max-width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding: 4rem 0;
 }
 
-.footer {
+.container > form {
+  width: 400px;
+  border: 1px solid red;
+  max-width: 90%;
+  border: 1px solid rgba(0,0,0,.2);
+  padding: 1rem;
+}
+
+.form_group {
   display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  margin: 1rem 0;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.form_group > label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.form_group > input {
+  padding: 0.5rem 0.2rem;
+  color: #333;
+  border: 1px solid rgba(0,0,0,.2)
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.form_group > input:focus {
+  outline: none;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.container > form > button {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  border: 1px solid #5caeab;
+  background: #fff;
+  font-weight: 700;
+  color: #5caeab;
+  cursor: pointer;
 }
 
-.title,
-.description {
+.container > form + p {
+  margin: 1rem 0;
+  color: #ff0000;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.studio {
+  width: 1300px;
+  max-width: 90%;
+  margin: 0 auto;
+  color: #333;
+}
+
+.studio > h2,
+.studio > p {
   text-align: center;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
+.studio_images{
   display: flex;
-  align-items: center;
   justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.studio_images > div {
+  width: 10rem;
+  height: 10rem;
+  border: 2px dashed #5caeab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.studio_images > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.generate {
+  display: flex;
+  justify-content: center;
+}
+
+.generate > button {
+  padding: 0.7rem 2rem;
+  background: #5caeab;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+.generate > button:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.studio > .output {
+  width: 15rem;
+  height: 15rem;
+  border: 1px solid rgba(0,0,0,.2);
+  margin: 2.5rem auto 1.5rem auto;
+}
+
+.studio > .output > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.studio > .output + input,
+.studio > .output + input + button {
+  display: block;
+  margin: 1rem auto;
+}
+
+.studio > .output + input {
+  padding: 0.5rem 0.2rem;
+  border: 1px solid rgba(0,0,0,.2);
+}
+
+.studio > .output + input:focus {
+  outline: none;
+}
+
+.studio > .output + input + button {
+  padding: 0.7rem 2rem;
+  background: #fff;
+  color: #5caeab;
+  border: 1px solid #5caeab;
+  font-weight: 700;
+  border-radius: 2px; 
+  cursor: pointer;
+}
+
+.studio > .output + input + button:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.status {
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.artworks_header {
+  text-align: center;
+  color: #333;
+}
+
+.artworks {
+  display: flex;
+  gap: 2rem;
+  width: 1300px;
+  max-width: 90%;
+  margin: 2.5rem auto;
+  color: #333;
   flex-wrap: wrap;
-  max-width: 800px;
+  justify-content: center;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+.artworks > div > div {
+  width: 10rem;
+  height: 10rem;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.artworks > div > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.artworks > div > h5 {
+  text-align: center;
+  margin: 1rem 0;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.artworks > div > button {
+  color: #5caeab;
+  font-size: 0.8rem;
+  display: block;
+  background: none;
+  margin: 0 auto;
+  border: none;
+  cursor: pointer;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
+.artworks > p > a {
+  font-weight: 700;
+  color: #5caeab;
 }

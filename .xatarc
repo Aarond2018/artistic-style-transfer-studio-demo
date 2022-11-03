@@ -1,0 +1,7 @@
+{
+  "databaseURL": "https://Aaron-damilola-s-workspace-l0k37v.us-east-1.xata.sh/db/art-studio",
+  "codegen": {
+    "output": "src/xata.js",
+    "moduleType": "esm"
+  }
+}

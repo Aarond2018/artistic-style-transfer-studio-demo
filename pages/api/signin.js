@@ -14,13 +14,13 @@ export default async function handler(req, res) {
 
 //create new user if no user record was found
     if (!user) {
-      await xata.db.users.create({
+      const newUser = await xata.db.users.create({
         email,
         password: await hash(password, 10),
       });
       return res.status(201).json({
         status: "success",
-        email: user.email
+        email: newUser.id
       })
     }
   

@@ -6,9 +6,14 @@ const tables = [
   {
     name: "artworks",
     columns: [
-      { name: "url", type: "string" },
       { name: "title", type: "string" },
-      { name: "user", type: "link", link: { table: "users" } },
+      {
+        name: "user",
+        type: "object",
+        columns: [{ name: "id", type: "link", link: { table: "users" } }],
+      },
+      { name: "url", type: "string" },
+      { name: "author", type: "link", link: { table: "users" } },
     ],
   },
   {

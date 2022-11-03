@@ -23,12 +23,12 @@ export default function Home({ todos }) {
 
     try {
       const response = await axios.post("/api/signin", formValues)
-      console.log(response)
       localStorage.setItem("artify_id", response.data.id);
       router.push('/studio')
-      setReqStatus("")
     } catch (error) {
       setError(error)
+    } finally {
+      setReqStatus("")
     }
   }
 

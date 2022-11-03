@@ -33,6 +33,7 @@ export default function studio() {
       setArtworkUrl(url[1]);
       setReqStatus("Done")
     } catch (error) {
+
       setReqStatus("failed, try again")
     }
   }

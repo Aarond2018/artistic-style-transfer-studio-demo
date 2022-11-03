@@ -119,6 +119,7 @@
   border: none;
   font-weight: 700;
   border-radius: 2px;
+  margin-right: 0.5rem;
 }
 
 .generate > button:disabled {
